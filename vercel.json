@@ -1,0 +1,13 @@
+{
+    "version": 2,
+    "builds": [
+      { "src": "app.mjs", "use": "@vercel/node" }
+    ],
+    "env": {
+      "PORT": "3000",
+      "REDIS_PASSWORD": "T2laTowYo8w5xpYEzTSVo6HbYLxVx5Mw",
+      "REDIS_HOST": "redis-14426.c267.us-east-1-4.ec2.cloud.redislabs.com",
+      "REDIS_PORT": "14426",
+      "FRONTEND_URL": "http://localhost:3001"
+    }
+  }
