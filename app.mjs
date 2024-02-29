@@ -41,6 +41,10 @@ app.use((req, res, next) => {
 app.use(express.json());
 
 
+app.get('/', (req, res) => {
+  res.send('¡Hello there!');
+});
+
 // Ruta para obtener el arreglo de nombres desde Redis
 app.get('/names', async (req, res) => {
   try {
