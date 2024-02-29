@@ -2,6 +2,8 @@
 import express from 'express';
 import Redis from 'ioredis';
 import dotenv from 'dotenv';
+import helmet from 'helmet';
+
 
 // Configuración de variables de entorno
 dotenv.config();
@@ -40,6 +42,12 @@ app.use((req, res, next) => {
 // Middleware para analizar datos JSON en las solicitudes entrantes
 app.use(express.json());
 
+app.use(helmet.contentSecurityPolicy({
+  directives: {
+    defaultSrc: ["'self'"],
+    fontSrc: ["'self'", "https://fonts.gstatic.com"]
+  }
+}));    
 
 app.get('/', (req, res) => {
   res.send('¡Hello there!');
