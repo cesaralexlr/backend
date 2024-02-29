@@ -1,0 +1,37 @@
+###
+POST http://localhost:3000/med HTTP/1.1
+Content-Type: application/json
+
+{ "name": "Lyrica suspension 2g/100ml (Pregabalina)", 
+  "dosage": "", "via": "ORAL", 
+  "adult": "25-450 mg al dia", 
+  "ped": "3.5 mg/kg/dia (max 150 mg/dia) 2-3 dosis divididas"}
+
+###
+GET http://localhost:3000/names HTTP/1.1
+
+
+###
+
+GET http://localhost:3000/med/Lyrica%20suspension%202g%2F100ml%20%28Pregabalina%29 HTTP/1.1
+
+###
+Traliken Vial 100 mg (KETOprofeno)
+
+###
+
+PUT http://localhost:3000/med/Lyrica%20suspension%202g%2F100ml%20%28Pregabalina%29 HTTP/1.1
+Content-Type: application/json
+
+{ "name": "Lyrica suspension 2g/100ml (Pregabalina)", 
+  "dosage": "", "via": "ORAL", 
+  "adult": "25-400 mg al dia", 
+  "ped": "3.5 mg/kg/dia (max 150 mg/dia) 2-3 dosis divididas"}
+
+###
+DELETE http://localhost:3000/med/Lyrica%20suspension%202g%2F100ml%20%28Pregabalina%29 HTTP/1.1
+
+# ###
+# POST http://localhost:3000/upload HTTP/1.1
+
+
